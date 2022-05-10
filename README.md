@@ -18,8 +18,13 @@
 						- MainWindow.xaml.cs
 							- namespace xxxx.Views
 					- Renombrar MainWindow.xaml a MainView.xaml
+						- MainWindow.xaml
+							- <Window x:Class="xxxx.Views.MainView"
 						- App.xaml 
 							- StartupUri="Views/MainView.xaml">
+						- MainView.xaml.cs
+							- Cambiar clase y constructor de "MainWindow" a
+								- MainView
 					- Crear carpeta ViewModels
 						- Agregar clase BaseViewModel
 						- Agregar clases Main, Home y AccountsViewModel 
@@ -27,3 +32,7 @@
 					- Crear carpeta Models
 						- Agregar clase Class1.cs
 					- Agregar dos botones a vista MainView
+					
+			- Invocar a vista Home
+				- Agregar en "MainViewModel.cs" propfull _selectedViewModel
+				- Agregar en 
