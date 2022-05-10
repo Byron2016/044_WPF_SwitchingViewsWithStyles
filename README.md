@@ -35,4 +35,41 @@
 					
 			- Invocar a vista Home
 				- Agregar en "MainViewModel.cs" propfull _selectedViewModel
-				- Agregar en 
+				- Agregar en "MainView.xaml.cs" DataContext.
+					- DataContext = new MainViewModel();
+				- Agregar en "MainView.xaml" 
+					- <ContentControl Content="{Binding SelectedViewModel}" />
+				- Agregar en "App.xaml"
+					- xmlns:views="clr-namespace:SwitchingViewsWithStyles.Views"
+					  xmlns:viewsmodels="clr-namespace:SwitchingViewsWithStyles.ViewModels"
+					  
+					- DataTemplate
+						<Application.Resources>
+							<DataTemplate DataType="{x:Type viewsmodels:HomeViewModel}">
+								<views:HomeView/>
+							</DataTemplate>
+							<DataTemplate DataType="{x:Type viewsmodels:AccourntViewModel}">
+								<views:AccourntView/>
+							</DataTemplate>
+						</Application.Resources>
+						
+			- Agregar Command al botón.
+				- En "MainView.xaml" agregar al boton
+					- Command="{Binding UpdateViewCommand}"
+					  CommandParameter="Home"
+					  
+				- En "ViewModels/MainViewModel.cs" agregar al set de la propiedad
+					- OnPropertyChanged(nameof(SelectedViewModel));
+					  
+					- public ICommand UpdateViewCommand { get; set; }
+					  
+					  
+					  public MainViewModel()
+					  {
+					  	UpdateViewCommand = new UpdateViewCommand(this);
+					  
+					  }
+					  
+				- En "BaseViewModel.cs" implementar "INotifyPropertyChanged"
+				- Crear "Commands/UpdateViewCommand.cs"
+					- public class UpdateViewCommand : ICommand
