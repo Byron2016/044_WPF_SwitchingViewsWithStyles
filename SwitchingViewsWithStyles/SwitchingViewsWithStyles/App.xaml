@@ -11,8 +11,8 @@
         <DataTemplate DataType="{x:Type viewsmodels:HomeViewModel}">
             <views:HomeView/>
         </DataTemplate>
-        <DataTemplate DataType="{x:Type viewsmodels:AccourntViewModel}">
-            <views:AccourntView/>
+        <DataTemplate DataType="{x:Type viewsmodels:AccountViewModel}">
+            <views:AccountView/>
         </DataTemplate>
     </Application.Resources>
 </Application>

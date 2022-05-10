@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace SwitchingViewsWithStyles.Views
 {
     /// <summary>
-    /// Interaction logic for AccourntView.xaml
+    /// Interaction logic for AccountView.xaml
     /// </summary>
-    public partial class AccourntView : UserControl
+    public partial class AccountView : UserControl
     {
-        public AccourntView()
+        public AccountView()
         {
             InitializeComponent();
         }

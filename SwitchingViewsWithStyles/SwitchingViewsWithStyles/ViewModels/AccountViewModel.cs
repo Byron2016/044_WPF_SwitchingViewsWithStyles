@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SwitchingViewsWithStyles.ViewModels
 {
-    public class AccourntViewModel: BaseViewModel
+    public class AccountViewModel: BaseViewModel
     {
     }
 }
